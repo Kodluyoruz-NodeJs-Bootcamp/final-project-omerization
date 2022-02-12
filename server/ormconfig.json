@@ -1,0 +1,25 @@
+{
+   "type": "mysql",
+   "host": "db-mysql-nyc3-67817-do-user-10872731-0.b.db.ondigitalocean.com",
+   "port": 25060,
+   "username": "doadmin",
+   "password": "xUNjpvueQkf2EZJy",
+   "database": "defaultdb",
+   "sslmode" : "REQUIRED",
+   "synchronize": true,
+   "logging": false,
+   "entities": [
+      "src/entity/**/*.ts"
+   ],
+   "migrations": [
+      "src/migration/**/*.ts"
+   ],
+   "subscribers": [
+      "src/subscriber/**/*.ts"
+   ],
+   "cli": {
+      "entitiesDir": "src/entity",
+      "migrationsDir": "src/migration",
+      "subscribersDir": "src/subscriber"
+   }
+}
