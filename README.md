@@ -1,38 +1,41 @@
   <p align="center">
-<img src="https://raw.githubusercontent.com/Kodluyoruz-NodeJs-Bootcamp/final-project-omerization/master/client/public/moviesql-readme2.png?token=GHSAT0AAAAAABRQEISP44JAE7QOBTFSXTGAYQJHRVA" style="max-width:100%;">
+<img src="https://i.ibb.co/cXFW7yJ/moviesql-readme2.png" style="max-width:100%;">
  </p>
 
-<h1 align="center"  >
- Social Movie Database  
-</h1>
+<h2 align="center"  >
+ SOCIAL MOVIE DATABASE  
+</h2>
 
 <h3 align="center">
 <a href="https://www.moviesql.com">
-    <strong> Live demo on moviesql.com </strong>
+    <strong> Live on moviesql.com </strong>
 </a>
 </h3>
 
 <p>
-MovieSQL is a social platform where moviegoers can add their favorite movies and actors and share their feelings about them. Other members can access these posts via the feed,
+MovieSQL is a social platform where movie lovers can add their favorite movies and actors and share their feelings about them. Other members can access these posts via the feed,
 They can like or comment on these posts.
 </p>
  
 
 
-## :eight_pointed_black_star: Table of content
+#  Table of content
 
-- [For whom?](#-for-whom)
-- [Code overview](#eyes-code-overview)
+- [Code overview](#code-overview)
 - [Features](#-features)
 - [Deployment](#-deployment)
    * [1- Debian](#-deployment)
 - [Development](#computer-development)
    * [1- MacOS](#computer-development)
    * [2- Debian](#computer-development)
-- [Usage](#trophy-usage)
-   * [1- In Dashboard](#1--in-dashboard)
-   * [2- Posting to REST API](#2--posting-to-rest-api)
-- [Contributing](#-contributing)
-- [Authors](#memo-authors)
+- [Author](#memo-authors)
 - [License](#mortar_board-license)
-- [Acknowledgement](#mag-acknowledgement)
+
+
+
+# Code Overview
+
+:small_red_triangle_down: Backend : <strong>Node and Express;</strong> <br>
+:small_red_triangle_down: Frontend Library :  <strong>React;</strong> <br>
+:small_red_triangle_down: Component Library : <strong> :ant: Ant Design;</strong> <br>
+:small_red_triangle_down: Database : <strong> MySQL; </strong>
