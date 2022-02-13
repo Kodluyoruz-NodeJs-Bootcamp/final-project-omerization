@@ -94,6 +94,19 @@ Sign In with one click.
   <img src="https://i.ibb.co/pjNDRFz/likes.jpg" style="max-width:50%;">
  </p>
 
+ ### :no_entry_sign: 404 Not Found
+ 
+ If you try to go to a page that does not exist, you may come across gandalf the gray.
+ 
+ <p align="left">
+<img src="https://i.ibb.co/Y4gNKqC/404.jpg" >
+ </p>
+ 
+
+ 
+ 
+ 
+ 
 
 # Usage
 
