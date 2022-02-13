@@ -13,7 +13,7 @@
 </h3>
 
 <p>
-Moviesql is a social platform where moviegoers can add their favorite movies and actors and share their feelings about them. Other members can access these posts via the feed,
+MovieSQL is a social platform where moviegoers can add their favorite movies and actors and share their feelings about them. Other members can access these posts via the feed,
 They can like or comment on these posts.
 </p>
  
