@@ -36,8 +36,8 @@ They can like or comment on these posts.
 - [Features](#features)
 - [Actions](#actions)
 - [Usage](#usage)
-- [Author](#memo-authors)
-- [License](#mortar_board-license)
+- [Author](#author)
+- [License](#license)
 
 
 
@@ -126,7 +126,7 @@ Server will run on port 1337. You can open the app in your browser with `http://
 
 Ömer Kaan Aslan
 
-# Licence
+# License
 
 This program is a free and open source software.
 
