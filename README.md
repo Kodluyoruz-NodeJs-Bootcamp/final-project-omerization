@@ -2,6 +2,9 @@
 <img src="https://i.ibb.co/cXFW7yJ/moviesql-readme2.png" style="max-width:100%;">
  </p>
 
+ 
+ 
+
 <h2 align="center"  >
 <strong> SOCIAL MOVIE DATABASE  </strong>
 </h2>
@@ -22,15 +25,17 @@ They can like or comment on these posts.
 <img src="https://i.ibb.co/7XhVRCX/moviesql-landnig.jpg" style="max-width:100%;">
  </p>
  
+ <p align="center">
 
-#  Table of content
+ </p>
+
+
+#   Table of content
 
 - [Code overview](#code-overview)
 - [Features](#features)
 - [Actions](#actions)
-- [Usage](#computer-development)
-   * [1- MacOS](#computer-development)
-   * [2- Debian](#computer-development)
+- [Usage](#usage)
 - [Author](#memo-authors)
 - [License](#mortar_board-license)
 
@@ -103,3 +108,16 @@ Run the commands below
 `npm start `
 
 Server will run on port 1337. You can open the app in your browser with `http://localhost:1337`   url 
+
+# Author
+
+Ömer Kaan Aslan
+
+# Licence
+
+This program is a free and open source software.
+
+ 
+  <p align="center">
+<img src="https://i.ibb.co/JsMPnps/moviesql-logo.png" style="height:100px">
+ </p>
