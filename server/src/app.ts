@@ -8,14 +8,14 @@ import favoriteRouter from "./routes/favorite";
 import postRouter from "./routes/post";
 import commentRouter from "./routes/comment";
 
-
+//express configurations
 const app: Application = express();
 app.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'build')));
 
-
+//express routes defined
 app.use("/user", userRouter);
 app.use("/favorites", favoriteRouter);
 app.use("/posts", postRouter);
@@ -24,6 +24,7 @@ app.use("/comments", commentRouter);
 //typeorm connection 
 createConnection().then(connection => {
 
+    // sending frontend static files
     app.get('/*', (req, res)=>{
         res.sendFile(path.join(__dirname,'build/index.html'))
     })

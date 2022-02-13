@@ -30,10 +30,6 @@ export const signin = async (req:Request, res:Response) => {
   }
 };
 
-
-
-
-
 export const signup = async (req:Request, res:Response) => {
 
   const { email,firstName,lastName, password } = req.body;
@@ -54,9 +50,6 @@ export const signup = async (req:Request, res:Response) => {
   }
 };
 
-
-
-
 export const googleSignIn = async (req:Request, res:Response) => {
   const { email, givenName, familyName, googleId } = req.body;
   const userRepository = getRepository(User);
@@ -76,7 +69,6 @@ export const googleSignIn = async (req:Request, res:Response) => {
     res.status(500).json({ message: "Something went wrong" });
   }
 };
-
 
 export const facebookSignIn = async (req:Request, res:Response) => {
   const { email, first_name, last_name, id } = req.body;

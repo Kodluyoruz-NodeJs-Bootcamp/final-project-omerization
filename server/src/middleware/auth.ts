@@ -18,7 +18,7 @@ interface JwtPayload {
   lastName: string;
 }
 
-
+//check if there is a user logged in
 const auth = async (req: IGetUserAuthInfoRequest, res: Response, next: NextFunction) => {
   try {
 

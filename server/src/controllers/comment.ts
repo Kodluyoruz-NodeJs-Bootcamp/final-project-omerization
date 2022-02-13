@@ -13,7 +13,7 @@ interface IGetUserAuthInfoRequest extends Request {
     userName?: String;
 }
 
-
+//create a comment
 export const createComment = async (req: IGetUserAuthInfoRequest, res: Response) => {
 
     const commentRepository = getRepository(Comment);
@@ -30,7 +30,7 @@ export const createComment = async (req: IGetUserAuthInfoRequest, res: Response)
     }
 }
 
-
+//get all comments made on a post
 export const getCommentsByPostId = async (req: Request, res: Response) => { 
 
     const { postId } = req.params;

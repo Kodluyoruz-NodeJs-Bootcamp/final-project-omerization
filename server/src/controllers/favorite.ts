@@ -12,6 +12,7 @@ interface IGetUserAuthInfoRequest extends Request {
     user?: String;
 }
 
+// create a new favorite 
 export const createFavorite = async (req: IGetUserAuthInfoRequest, res: Response) => {
 
     const favoriteRepository = getRepository(Favorite);
@@ -26,6 +27,7 @@ export const createFavorite = async (req: IGetUserAuthInfoRequest, res: Response
     }
 }
 
+// update a favorite with unique id
 export const updateFavorite = async (req: IGetUserAuthInfoRequest, res: Response) => {
     const { favoriteId } = req.params;
     const favoriteRepository = getRepository(Favorite);
@@ -47,6 +49,7 @@ export const updateFavorite = async (req: IGetUserAuthInfoRequest, res: Response
     }
 }
 
+// delete a favorite with unique id
 export const deleteFavorite = async (req: IGetUserAuthInfoRequest, res: Response) => {
 
     const { favoriteId } = req.params;
@@ -61,7 +64,7 @@ export const deleteFavorite = async (req: IGetUserAuthInfoRequest, res: Response
     }
 }
 
-
+// get all favorite movies of a user 
 export const getUserFavoriteMovies = async (req: Request, res: Response) => { 
 
     const {userId} = req.params;
@@ -75,7 +78,7 @@ export const getUserFavoriteMovies = async (req: Request, res: Response) => {
     }
 }
 
-
+// get all favorite actor of a user 
 export const getUserFavoriteActors = async (req: Request, res: Response) => { 
 
     const {userId} = req.params;
@@ -89,6 +92,7 @@ export const getUserFavoriteActors = async (req: Request, res: Response) => {
     }
 }
 
+//get a favorite with unique id 
 export const getFavoriteById = async (req: Request, res: Response) => { 
 
     const {favoriteId} = req.params;
@@ -101,6 +105,5 @@ export const getFavoriteById = async (req: Request, res: Response) => {
         res.status(404).json({ message: error.message });
     }
 }
-
 
 

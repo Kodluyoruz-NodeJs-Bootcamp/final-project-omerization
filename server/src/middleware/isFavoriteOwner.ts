@@ -9,7 +9,7 @@ interface IGetUserAuthInfoRequest extends Request {
     userName?: String | Function;
 }
 
-
+//check if current user is the owner of favorite
 const isFavoriteOwner = async (req: IGetUserAuthInfoRequest, res: Response, next: NextFunction) => {
     const { favoriteId } = req.params;
     const favoriteRepository = getRepository(Favorite);

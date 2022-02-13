@@ -9,7 +9,7 @@ interface IGetUserAuthInfoRequest extends Request {
     userName?: String | Function;
 }
 
-
+//check if current user is the owner of post
 const isPostOwner = async (req: IGetUserAuthInfoRequest, res: Response, next: NextFunction) => {
     const { postId } = req.params;
     const postRepository = getRepository(Post);

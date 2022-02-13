@@ -13,7 +13,7 @@ interface IGetUserAuthInfoRequest extends Request {
     userName?: String;
 }
 
-
+//create a post
 export const createPost = async (req: IGetUserAuthInfoRequest, res: Response) => {
 
     const postRepository = getRepository(Post);
@@ -33,7 +33,7 @@ export const createPost = async (req: IGetUserAuthInfoRequest, res: Response) =>
     }
 }
 
-
+//update a post with unique id
 export const updatePost = async (req: IGetUserAuthInfoRequest, res: Response) => {
     const { postId } = req.params;
     const postRepository = getRepository(Post);
@@ -61,6 +61,7 @@ export const updatePost = async (req: IGetUserAuthInfoRequest, res: Response) =>
     }
 }
 
+// increment post likeCount by one
 export const likePost = async (req: IGetUserAuthInfoRequest, res: Response) => {
     const { postId } = req.params;
     const postRepository = getRepository(Post);
@@ -79,7 +80,7 @@ export const likePost = async (req: IGetUserAuthInfoRequest, res: Response) => {
     }
 }
 
-
+// delete a post with unique id
 export const deletePost = async (req: IGetUserAuthInfoRequest, res: Response) => {
 
     const { postId } = req.params;
@@ -95,7 +96,7 @@ export const deletePost = async (req: IGetUserAuthInfoRequest, res: Response) =>
     }
 }
 
-
+// get all posts
 export const getAllPosts = async (req: Request, res: Response) => { 
 
     const postRepository = getRepository(Post);
@@ -108,6 +109,7 @@ export const getAllPosts = async (req: Request, res: Response) => {
     }
 }
 
+//get a post with unique id
 export const getPostById = async (req: Request, res: Response) => { 
 
     const { postId } = req.params;
