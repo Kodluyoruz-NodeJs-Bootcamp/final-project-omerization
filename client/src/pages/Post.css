@@ -1,0 +1,74 @@
+.post-layout {
+    min-height: 100vh;
+    background-color: #1d1d2b;
+}
+
+.post-content {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #1d1d2b;
+    border: 1px solid #9ab;
+    border-radius: 5px; 
+}
+
+.post-options {
+    color: white; 
+    margin-left: 50px;
+}
+
+.post-options-item:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.likes-container {
+    color: #9ab;
+    font-size: 15px;
+    padding-left: 70px;
+}
+
+.likes-icon {
+    color: #9ab;
+    font-size: 25px;
+    padding-left: 15px; 
+}
+
+.likes-count {
+    font-size: 10px;
+    padding-left: 10px;
+}
+
+.post-info-ownername {
+    color: #9ab;
+    font-size: 1.8em;
+    font-weight: 300;
+    padding-left: 10px;
+    border-bottom: 1px solid #9ab;
+}
+
+.post-info-favoritename {
+    font-size: 1.6em;
+    font-weight: 700;
+    padding-left: 10px;
+    padding-top: 10px;
+    color: white;
+}
+
+.post-info-date {
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 10px;
+    color: #696969;
+}
+
+.post-info-review {
+    font-size: 1.2em; 
+    font-weight: 400;
+    padding-left: 10px; 
+    color: #9ab;
+}
+
+.post-footer {
+    background-color: #1d1d2b;
+}

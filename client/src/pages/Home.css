@@ -1,0 +1,46 @@
+.home-layout {
+    min-height: 100vh;
+    background-color: #1d1d2b;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.home-content {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    background-color: transparent;
+    border: 1px solid #9ab;
+    border-radius: 5px;
+}
+
+.home-content-header {
+    margin: auto;
+    margin-top: 20px;
+    padding: 0 10%;
+    color: white; 
+    font-weight: 600;
+    font-size: 2em;
+}
+
+.home-content-text {
+    margin: auto;
+    margin-top: 20px;
+    padding: 0 10%;
+    color: white;
+    font-weight: 200;
+    font-size: 2em;
+}
+
+.gofavorite-button {
+    background: #18c947;
+    border-color: #9ab;
+    font-weight: 600;
+    margin-left: 10px;
+    color: white;
+}
+
+.home-footer {
+    background-color: transparent;
+}

@@ -10,9 +10,9 @@ import isPostOwner from "../middleware/isPostOwner";
 router.post('/', auth, createPost)
 router.patch('/:postId', auth, isPostOwner, updatePost);
 router.patch('/:postId/likes', auth, likePost);
-router.delete('/:postId', auth,isPostOwner, deletePost);
+router.delete('/:postId', auth, isPostOwner, deletePost);
 router.get('/', getAllPosts)
-router.get('/:postId', auth, getPostById)
+router.get('/:postId', getPostById)
 
 
 export default router;

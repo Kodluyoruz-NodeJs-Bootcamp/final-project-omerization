@@ -2,14 +2,13 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { GoogleLogin } from 'react-google-login';
-
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
 import { Form, Input, Button } from 'antd';
 import 'antd/dist/antd.css';
+import './Navbar.css'
 import { signin, googleSignup, facebookSignup } from '../actions/auth';
 import { GoogleOutlined } from '@ant-design/icons';
 import { FacebookOutlined } from '@ant-design/icons';
-
 
 const initialState = { firstName: '', lastName: '', email: '', password: '' };
 
@@ -18,12 +17,9 @@ const SignIn = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-
-
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     dispatch(signin(form, navigate));
   };
-
 
   const googleSuccess = async (res: any) => {
     const result = res?.profileObj;
@@ -38,15 +34,12 @@ const SignIn = () => {
   const googleError = () => alert('Google Sign In was unsuccessful. Try again later');
 
   const facebookSuccess = async (res: any) => {
- 
-
     try {
       dispatch(facebookSignup(res, navigate));
     } catch (error) {
       console.log(error);
     }
   };
-
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => setForm({ ...form, [e.target.name]: e.target.value });
 
@@ -103,7 +96,7 @@ const SignIn = () => {
       <GoogleLogin
         clientId="998866258630-a7gvc4kb657bh86gujbrr9domlquh4h4.apps.googleusercontent.com"
         render={(renderProps) => (
-          <Button color="primary" style={{ marginLeft: 155 }} onClick={renderProps.onClick} disabled={renderProps.disabled} icon={<GoogleOutlined />} >
+          <Button color="primary" className="google-button" onClick={renderProps.onClick} disabled={renderProps.disabled} icon={<GoogleOutlined />} >
             Sign in with Google
           </Button>
         )}
@@ -118,17 +111,13 @@ const SignIn = () => {
           callback={facebookSuccess}
           fields="first_name,last_name,email"
           render={renderProps => (
-            <Button  style={{ marginLeft: 155, backgroundColor:"#4267B2", color:"white" }} onClick={renderProps.onClick} icon={<FacebookOutlined />} >
+            <Button  className="facebook-button" onClick={renderProps.onClick} icon={<FacebookOutlined />} >
               Sign in with Facebook
             </Button>
           )}
         />
       </div>
-
     </Form>
-
-
-
 
   );
 };

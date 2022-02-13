@@ -1,0 +1,44 @@
+.comment-container {
+    padding: 20px;
+}
+
+.comment-header {
+    color: white;
+    font-weight: 500;
+    font-size:1.4em;
+}
+
+.comment-avatar {
+    margin-bottom: 5px;
+}
+
+.comment-button {
+    background:#18c947 !important;
+    border-color:#9ab !important;
+    font-weight: 700 !important;
+}
+
+.comment-list-item {
+    padding-left: 10% !important;
+    color: white !important;
+    border: 1px  solid #9ab !important;
+    border-bottom: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    font-weight: 300 !important;
+}
+
+.comment-owner {
+    color: white;
+    font-weight:500;
+}
+
+.comment-list-item-meta {
+    color: #cfcfcf;
+    font-weight: 500;
+}
+
+.comment-date {
+    font-weight: 300;
+    font-size: 0.8em;
+}

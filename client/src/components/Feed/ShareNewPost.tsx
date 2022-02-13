@@ -34,7 +34,6 @@ const ShareNewPost = (props: SharePostProps) => {
                 <Button onClick={actorClick}>An Actor</Button>
                 <ActorForm user={user} isActorFormVisible={isActorFormVisible}  handleCancel={handleCancel} />
                 <MovieForm user={user} isMovieFormVisible={isMovieFormVisible}  handleCancel={handleCancel} />
-
             </div>
         </div>
     );

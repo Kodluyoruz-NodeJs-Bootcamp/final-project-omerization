@@ -67,15 +67,12 @@ export const likePost = async (req: IGetUserAuthInfoRequest, res: Response) => {
     
     const postToUpdate = await postRepository.findOne({id:postId});
 
-   
-
     if(!postToUpdate) return res.status(404).send(`No post with id: ${postId}`);
 
     postToUpdate.likeCount++;
 
     try {
         const result = await postRepository.save(postToUpdate);
-     
         res.status(200).json(result);
     } catch (error: any) {
         res.status(404).json({ message: error.message });

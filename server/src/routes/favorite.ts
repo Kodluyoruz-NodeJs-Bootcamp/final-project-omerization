@@ -9,10 +9,10 @@ import isFavoriteOwner from "../middleware/isFavoriteOwner";
 
 router.post('/', auth, createFavorite);
 router.patch('/:favoriteId', auth, isFavoriteOwner, updateFavorite);
-router.get('/:favoriteId', auth, getFavoriteById);
+router.get('/:favoriteId', getFavoriteById);
 router.delete('/:favoriteId', auth, isFavoriteOwner, deleteFavorite);
-router.get('/movies/:userId', auth, getUserFavoriteMovies);
-router.get('/actors/:userId', auth, getUserFavoriteActors);
+router.get('/movies/:userId', getUserFavoriteMovies);
+router.get('/actors/:userId', getUserFavoriteActors);
 
 
 export default router;

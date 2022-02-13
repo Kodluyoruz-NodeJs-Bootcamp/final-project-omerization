@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { Form, Input, Button, Select, Upload } from 'antd';
+import { Form, Input, Button, Select } from 'antd';
 import { getUserFavoriteMovies } from '../../actions/favorites';
 import { updatePost } from '../../actions/posts';
 import { RootState } from '../../reducers';
-
 import 'antd/dist/antd.css';
-
 
 const { TextArea } = Input;
 const { Option } = Select;
@@ -15,7 +13,6 @@ const { Option } = Select;
 const initialMovieForm = { review: '', favorite: '' };
 
 const MovieForm = (props: UpdatePostProps) => {
-
 
     const [postMovieForm, setPostMovieForm] = useState(initialMovieForm);
     const dispatch = useDispatch();
@@ -30,8 +27,6 @@ const MovieForm = (props: UpdatePostProps) => {
 
     const favoriteMovies = useSelector((state: RootState) => state.favoriteMovies);
 
-
-
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         dispatch(updatePost(postMovieForm, postToUpdate.id));
         handleCancel();
@@ -39,15 +34,9 @@ const MovieForm = (props: UpdatePostProps) => {
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => setPostMovieForm({ ...postMovieForm, [e.target.name]: e.target.value });
 
-
-
     const handleSelect = (value: string) => setPostMovieForm({ ...postMovieForm, favorite: value });
 
-
-
     return (
-
-
         <Form
             name="basic"
             form={form}
@@ -83,7 +72,6 @@ const MovieForm = (props: UpdatePostProps) => {
                 <div>  Your thoughts about this movie:</div>
                 <TextArea name="review" defaultValue={postToUpdate.review} onChange={handleChange} placeholder="What I liked most about this movie is..." autoSize />
             </Form.Item>
-
             <Form.Item
                 wrapperCol={{
                     offset: 8,
@@ -95,9 +83,6 @@ const MovieForm = (props: UpdatePostProps) => {
                 </Button>
             </Form.Item>
         </Form>
-
-
-
     );
 };
 

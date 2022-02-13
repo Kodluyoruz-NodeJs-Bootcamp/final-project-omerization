@@ -9,8 +9,8 @@ import { User } from "../entity/User";
 const secret = 'speak friend, and enter';
 
 export const signin = async (req:Request, res:Response) => {
-  const { email, password } = req.body;
 
+  const { email, password } = req.body;
   const userRepository = getRepository(User);
 
   try {
@@ -51,8 +51,6 @@ export const signup = async (req:Request, res:Response) => {
     res.status(201).json({ result, token });
   } catch (error) {
     res.status(500).json({ message: "Something went wrong" });
-    
-    console.log(error);
   }
 };
 
@@ -97,6 +95,5 @@ export const facebookSignIn = async (req:Request, res:Response) => {
 
   } catch (error) {
     res.status(500).json({ message: "Something went wrong" });
-    console.log(error);
   }
 };

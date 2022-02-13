@@ -39,7 +39,7 @@ const auth = async (req: IGetUserAuthInfoRequest, res: Response, next: NextFunct
 
     next();
   } catch (error) {
-    console.log(error);
+    res.status(403).send("Authentication failed");
   }
 };
 

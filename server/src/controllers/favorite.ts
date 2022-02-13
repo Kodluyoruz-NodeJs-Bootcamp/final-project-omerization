@@ -23,7 +23,6 @@ export const createFavorite = async (req: IGetUserAuthInfoRequest, res: Response
         res.status(200).json(result);
     } catch (error: any) {
         res.status(404).json({ message: error.message });
-        console.log(error);
     }
 }
 
@@ -45,15 +44,12 @@ export const updateFavorite = async (req: IGetUserAuthInfoRequest, res: Response
         res.status(200).json(result);
     } catch (error: any) {
         res.status(404).json({ message: error.message });
-        console.log("hey");
-     
     }
 }
 
 export const deleteFavorite = async (req: IGetUserAuthInfoRequest, res: Response) => {
 
     const { favoriteId } = req.params;
-
     const favoriteRepository = getRepository(Favorite);
     const favoriteToRemove = await favoriteRepository.findOne({id:favoriteId});
  
@@ -69,12 +65,10 @@ export const deleteFavorite = async (req: IGetUserAuthInfoRequest, res: Response
 export const getUserFavoriteMovies = async (req: Request, res: Response) => { 
 
     const {userId} = req.params;
-
     const favoriteRepository = getRepository(Favorite);
 
     try {
         const userFavorites = await favoriteRepository.find({owner:userId, type:"movie"});
-         
         res.status(200).json(userFavorites);
     } catch (error: any) {
         res.status(404).json({ message: error.message });
@@ -85,12 +79,10 @@ export const getUserFavoriteMovies = async (req: Request, res: Response) => {
 export const getUserFavoriteActors = async (req: Request, res: Response) => { 
 
     const {userId} = req.params;
-
     const favoriteRepository = getRepository(Favorite);
 
     try {
         const userFavorites = await favoriteRepository.find({owner:userId, type:"actor"});
-        
         res.status(200).json(userFavorites);
     } catch (error: any) {
         res.status(404).json({ message: error.message });
@@ -100,12 +92,10 @@ export const getUserFavoriteActors = async (req: Request, res: Response) => {
 export const getFavoriteById = async (req: Request, res: Response) => { 
 
     const {favoriteId} = req.params;
-
     const favoriteRepository = getRepository(Favorite);
 
     try {
         const favorite = await favoriteRepository.findOne({id:favoriteId});
-        
         res.status(200).json(favorite);
     } catch (error: any) {
         res.status(404).json({ message: error.message });

@@ -1,7 +1,5 @@
-
 import { Col } from 'antd';
-
-
+import './Favorites.css';
 
 const FavoriteCard = (props: FavoriteProps) => {
 
@@ -10,26 +8,17 @@ const FavoriteCard = (props: FavoriteProps) => {
 
     return (
         <Col xs={24} sm={24} md={24} lg={12} xl={8}>
-            <div style={{ height: 320, width: 160, border: "1px solid #9ab", borderRadius: 5, backgroundColor: "#456", margin: 10 }}>
-                <div style={{ height: "80%", backgroundImage: backgroundImage, backgroundRepeat: "no-repeat", backgroundSize: "cover" }}>
-
-                </div>
-                <div style={{ color: "#a2c4e8", fontWeight: 700, textAlign: "center", overflowWrap: "break-word", overflow: "hidden", textOverflow: "ellipsis" }}>
+            <div className="favoritecard-container">
+                <div style={{ backgroundImage: backgroundImage }} className="favoritecard-image" />        
+                <div className="favoritecard-name">
                     {name}
                 </div>
             </div>
-            <div style={{ margin: 10,marginLeft:40, color:"#9ab", fontWeight:600}}>
-                {userId == owner ? <div><span onClick={()=> {handleUpdate(favorite)} }  >Update</span> <span onClick={()=> {handleDelete(favorite)}} >Delete</span> </div> : null}
+            <div className="favoritecard-options" >
+                {userId == owner ? <div><span className="favoritecard-options-item" onClick={()=> {handleUpdate(favorite)} }  >Update</span> <span className="favoritecard-options-item" onClick={()=> {handleDelete(favorite)}} >Delete</span> </div> : null}
             </div>
-        
-
         </Col>
-
     );
-
-
-
-
 }
 
 

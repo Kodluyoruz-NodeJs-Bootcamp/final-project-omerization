@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { Form, Input, Button, Select, Upload } from 'antd';
+import { Form, Input, Button, Select } from 'antd';
 import { getUserFavoriteMovies } from '../../actions/favorites';
 import { createPost } from '../../actions/posts';
 import { RootState } from '../../reducers';
-
 import 'antd/dist/antd.css';
 
 
@@ -16,7 +15,6 @@ const initialMovieForm = { review: '', favorite: '' };
 
 const MovieForm = (props: MovieFormProps) => {
 
-
     const [postMovieForm, setPostMovieForm] = useState(initialMovieForm);
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -24,16 +22,11 @@ const MovieForm = (props: MovieFormProps) => {
 
     const { user, handleCancel, isMovieFormVisible } = props;
 
-
-
-
     useEffect(() => {
         dispatch(getUserFavoriteMovies(user.result.id));
     }, [dispatch]);
 
     const favoriteMovies = useSelector((state: RootState) => state.favoriteMovies);
-
-
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         dispatch(createPost(postMovieForm, navigate));
@@ -41,17 +34,11 @@ const MovieForm = (props: MovieFormProps) => {
         form.resetFields(["name", "image"]);
     };
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement> ) => setPostMovieForm({ ...postMovieForm, [e.target.name]: e.target.value });
-
-   
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => setPostMovieForm({ ...postMovieForm, [e.target.name]: e.target.value });
 
     const handleSelect = (value: string) => setPostMovieForm({ ...postMovieForm, favorite: value });
 
-
-
     return (
-
-
         <Form
             name="basic"
             form={form}
@@ -81,7 +68,7 @@ const MovieForm = (props: MovieFormProps) => {
                 </Select>
             </Form.Item>
             <Form.Item>
-             <div>  Your thoughts about this movie:</div>
+                <div>  Your thoughts about this movie:</div>
                 <TextArea name="review" onChange={handleChange} placeholder="What I liked most about this movie is..." autoSize />
             </Form.Item>
 
@@ -96,9 +83,6 @@ const MovieForm = (props: MovieFormProps) => {
                 </Button>
             </Form.Item>
         </Form>
-
-
-
     );
 };
 

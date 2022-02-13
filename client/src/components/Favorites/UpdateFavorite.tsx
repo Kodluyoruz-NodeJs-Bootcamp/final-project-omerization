@@ -7,22 +7,16 @@ import { UploadOutlined } from '@ant-design/icons';
 import 'antd/dist/antd.css';
 import { updateFavorite } from '../../actions/favorites';
 
-
-
-
-
-
 const AddFavoriteMovie = (props: UpdateFavoriteProps) => {
+    
     const { handleCancel, favoriteToUpdate } = props;
-    const initialState = { name: favoriteToUpdate.name , image: favoriteToUpdate.image };
+
+    const initialState = { name: favoriteToUpdate.name, image: favoriteToUpdate.image };
     const [updateFavoriteForm, setUpdateFavoriteForm] = useState(initialState);
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const [form] = Form.useForm();
-
-
-
 
     const handleUpdate = (e: React.FormEvent<HTMLFormElement>) => {
         dispatch(updateFavorite(updateFavoriteForm, favoriteToUpdate.id));
@@ -30,8 +24,6 @@ const AddFavoriteMovie = (props: UpdateFavoriteProps) => {
         form.resetFields(["name", "image"]);
         window.location.reload();
     };
-
-    
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => setUpdateFavoriteForm({ ...updateFavoriteForm, [e.target.name]: e.target.value });
 
@@ -41,18 +33,12 @@ const AddFavoriteMovie = (props: UpdateFavoriteProps) => {
         reader.onload = function () {
             let base64String = reader.result;
             let imageData = base64String as string;
-
             setUpdateFavoriteForm({ ...updateFavoriteForm, image: imageData });
         }
         reader.readAsDataURL(file);
     };
 
-
-
-
     return (
-
-
         <Form
             name="basic"
             form={form}
@@ -65,7 +51,7 @@ const AddFavoriteMovie = (props: UpdateFavoriteProps) => {
             initialValues={{
                 remember: true,
                 ["name"]: favoriteToUpdate.name
-                
+
             }}
             onFinish={handleUpdate}
             autoComplete="off"
@@ -80,7 +66,7 @@ const AddFavoriteMovie = (props: UpdateFavoriteProps) => {
                     },
                 ]}
             >
-                <Input name="name"  maxLength={50} onChange={handleChange} />
+                <Input name="name" maxLength={50} onChange={handleChange} />
             </Form.Item>
             <Form.Item
                 label="Image"
@@ -96,8 +82,6 @@ const AddFavoriteMovie = (props: UpdateFavoriteProps) => {
                     <Button icon={<UploadOutlined />}>Upload</Button>
                 </Upload>
             </Form.Item>
-
-
             <Form.Item
                 wrapperCol={{
                     offset: 8,
@@ -109,9 +93,6 @@ const AddFavoriteMovie = (props: UpdateFavoriteProps) => {
                 </Button>
             </Form.Item>
         </Form>
-
-
-
     );
 };
 

@@ -1,0 +1,98 @@
+.landing-layout {
+    min-height: 100vh !important;
+    background-color: #1d1d2b !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    overflow: hidden !important;
+}
+
+.landing-header {
+    background-color: transparent !important;
+    margin: auto !important;
+    padding: 10px !important;
+    padding-top: 0 !important;
+}
+
+
+.landing-header-content {
+    margin: auto;
+    color: white;
+    display: flex;
+}
+
+.landing-header-logo-container {
+    padding-right: 20px; 
+}
+
+
+.landing-header-logo {
+    height:50px;
+}
+
+.landing-header-item-container {
+    display: flex;
+}
+
+.landing-header-item {
+    padding: 25px 10px; 
+    line-height: 1.2; 
+    font-weight: 700; 
+    text-align: center; 
+    color: #e3e3e3;
+    text-shadow: 0px 6px 7px black; 
+}
+.landing-header-item:hover {
+    cursor: pointer; 
+    color:white;
+}
+
+.landing-message {
+    color: white;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+.landing-content {
+    padding-top: 200px!important;
+    padding-left: 20px !important; 
+    margin: auto !important;
+}
+
+
+.landing-content-header {
+    text-align: center;
+}
+
+.landing-content-header > h1 {
+    color: white;
+    font-size: 3em;
+    font-weight: 600;
+    text-shadow: 0px 6px 7px black; 
+}
+
+.landing-content-header > h2 {
+    color: white;
+    font-size: 1.6em;
+    font-weight: 300;
+    text-shadow: 0px 6px 7px black
+}
+
+.landing-brand {
+    color: gray;
+    text-align: center;
+    padding-top: 300px; 
+    font-size: 1.2em;
+}
+
+.guest-item {
+    color: white;
+}
+
+.guest-item:hover {
+    color: white;
+}
+
+
+
+

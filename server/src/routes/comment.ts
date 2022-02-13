@@ -7,6 +7,6 @@ const router = express.Router();
 import auth from "../middleware/auth";
 
 router.post('/', auth, createComment)
-router.get('/:postId', auth, getCommentsByPostId)
+router.get('/:postId', getCommentsByPostId)
 
 export default router;

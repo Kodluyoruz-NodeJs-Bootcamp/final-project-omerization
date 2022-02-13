@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { Form, Input, Button, Select, Upload } from 'antd';
+import { Form, Input, Button, Select } from 'antd';
 import { getUserFavoriteActors } from '../../actions/favorites';
 import { createPost } from '../../actions/posts';
 import { RootState } from '../../reducers';
-
 import 'antd/dist/antd.css';
 
 
@@ -15,7 +14,6 @@ const { Option } = Select;
 const initialActorForm = { review: '', favorite: '' };
 
 const ActorForm = (props: UpdatePostProps) => {
-
 
     const [postActorForm, setPostActorForm] = useState(initialActorForm);
     const dispatch = useDispatch();
@@ -30,8 +28,6 @@ const ActorForm = (props: UpdatePostProps) => {
 
     const favoriteActors = useSelector((state: RootState) => state.favoriteActors);
 
-
-
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         dispatch(createPost(postActorForm, navigate));
         handleCancel();
@@ -39,15 +35,9 @@ const ActorForm = (props: UpdatePostProps) => {
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => setPostActorForm({ ...postActorForm, [e.target.name]: e.target.value });
 
-
-
     const handleSelect = (value: string) => setPostActorForm({ ...postActorForm, favorite: value });
 
-
-
     return (
-
-
         <Form
             name="basic"
             form={form}
@@ -59,10 +49,10 @@ const ActorForm = (props: UpdatePostProps) => {
             autoComplete="off"
             style={{ paddingTop: 20 }}
         >
-            <div> Select one of your favorite movies:</div>
+            <div> Select one of your favorite actors:</div>
             <Form.Item
-            name="favorite"
-            initialValue={postToUpdate.favorite}
+                name="favorite"
+                initialValue={postToUpdate.favorite}
             >
                 <Select
                     showSearch
@@ -74,8 +64,8 @@ const ActorForm = (props: UpdatePostProps) => {
                     }}
                 >
                     {favoriteActors.map((favorite: FavoriteProps) => (
-                        <Option   value={favorite.name} >{favorite.name}</Option>
-                        
+                        <Option value={favorite.name} >{favorite.name}</Option>
+
                     ))};
                 </Select>
             </Form.Item>
@@ -83,7 +73,6 @@ const ActorForm = (props: UpdatePostProps) => {
                 <div>  Your thoughts about this Actor:</div>
                 <TextArea name="review" defaultValue={postToUpdate.review} onChange={handleChange} placeholder="What I liked most about this movie is..." autoSize />
             </Form.Item>
-
             <Form.Item
                 wrapperCol={{
                     offset: 8,
@@ -95,9 +84,6 @@ const ActorForm = (props: UpdatePostProps) => {
                 </Button>
             </Form.Item>
         </Form>
-
-
-
     );
 };
 

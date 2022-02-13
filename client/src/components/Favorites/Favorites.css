@@ -1,0 +1,60 @@
+.favorite-container {
+    width: 50%;
+    border: 1px solid #9ab;
+    border-radius: 5;
+}
+
+.favorite-divider {
+    color: #9ab !important;
+    font-size:1.5em !important;
+}
+
+.addnew-button {
+    background:#18c947;
+    border-color:#9ab;
+    font-weight: 700;
+    margin-left:10px;
+}
+
+.addnew-button:hover {
+    background:#18c947 !important;
+}
+
+.favoritecard-container {
+    height:320px;
+    width:160px;
+    border: 1px solid #9ab;
+    border-radius: 5px;
+    background-color: #456;
+    margin: 10px;
+}
+
+.favoritecard-image {
+    height:80%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.favoritecard-name {
+    color:#a2c4e8;
+    font-weight: 700;
+    text-align: center;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.favoritecard-options {
+    margin: 10px;
+    margin-left: 40px;
+    color: #9ab;
+    font-weight: 600;
+}
+
+.favoritecard-options-item:hover {
+    color:white !important;
+    cursor: pointer;
+}
+
+
+

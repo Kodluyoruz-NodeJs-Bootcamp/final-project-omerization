@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { Form, Input, Button, Upload } from 'antd';
 import { UploadOutlined } from '@ant-design/icons';
 import 'antd/dist/antd.css';
 import { createFavorite } from '../../actions/favorites';
-
-
 
 const initialState = { name: '', type: 'actor', image: "" };
 
@@ -19,9 +17,6 @@ const AddFavoriteActor = (props: AddFavoriteProps) => {
 
     const { handleCancel } = props;
 
-
-
-
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         dispatch(createFavorite(favoriteForm, navigate));
         handleCancel();
@@ -31,14 +26,8 @@ const AddFavoriteActor = (props: AddFavoriteProps) => {
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => setFavoriteForm({ ...favoriteForm, [e.target.name]: e.target.value });
 
-
-
-
     const handleFileUpload = async (e: any) => {
-
-
         let file = e.fileList[0].originFileObj;
-
         let reader = new FileReader();
         reader.onload = function () {
             let base64String = reader.result;
@@ -46,15 +35,10 @@ const AddFavoriteActor = (props: AddFavoriteProps) => {
             setFavoriteForm({ ...favoriteForm, image: imageData });
         }
         reader.readAsDataURL(file);
-
     };
 
 
-
-
     return (
-
-
         <Form
             name="basic"
             form={form}
@@ -70,48 +54,20 @@ const AddFavoriteActor = (props: AddFavoriteProps) => {
             onFinish={handleSubmit}
             autoComplete="off"
         >
-            <Form.Item
-                label="Name"
-                name="name"
-                rules={[
-                    {
-                        required: true,
-                        message: 'Please input your first name!',
-                    },
-                ]}
-            >
+            <Form.Item label="Name" name="name" rules={[{ required: true, message: 'Please input name of the actor!' }]}>
                 <Input name="name" onChange={handleChange} />
             </Form.Item>
-            <Form.Item
-                label="Image"
-                name="image"
-                rules={[
-                    {
-                        required: true,
-                        message: 'Please input your first name!',
-                    },
-                ]}
-            >
-                <Upload name={"image"} accept={".jpg,.jpeg"} maxCount={1} onChange={(info) => { handleFileUpload(info) }} >
+            <Form.Item label="Image" name="image" rules={[{ required: true, message: 'Please add an image of actor' }]}>
+                <Upload name={"image"} accept={".jpg,.jpeg"} maxCount={1} onChange={(info) => { handleFileUpload(info) }}>
                     <Button icon={<UploadOutlined />}>Upload</Button>
                 </Upload>
             </Form.Item>
-
-
-            <Form.Item
-                wrapperCol={{
-                    offset: 8,
-                    span: 16,
-                }}
-            >
+            <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
                 <Button type="primary" htmlType="submit">
                     Submit
                 </Button>
             </Form.Item>
         </Form>
-
-
-
     );
 };
 

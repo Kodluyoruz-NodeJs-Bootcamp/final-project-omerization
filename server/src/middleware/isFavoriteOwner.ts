@@ -25,7 +25,7 @@ const isFavoriteOwner = async (req: IGetUserAuthInfoRequest, res: Response, next
         }
 
     } catch (error) {
-        console.log(error);
+        res.status(403).send("User is not the favorite owner or" + error);
     }
 };
 

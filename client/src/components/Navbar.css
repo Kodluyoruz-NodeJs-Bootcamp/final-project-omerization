@@ -1,0 +1,51 @@
+.navbar-logo {
+    height: 50px;
+}
+
+.navbar-avatar {
+  margin-bottom:5px
+}
+
+.navbar-header {
+  background-color: #111121 !important; 
+}
+
+.ant-menu-dark.ant-menu-horizontal {
+    margin-left: 30% !important;
+    background-color:#111121;
+}
+
+.modified-menuItem {
+    font-weight: 700 !important;
+}
+
+
+.modified-menuItem-userInfo {
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  margin-right: 40px !important;
+
+}
+
+.modified-menuItem-userInfo:hover {
+
+  cursor: text;
+  background-color: transparent !important;
+  color: white !important;
+}
+
+.modified-menuItem:hover {
+  background-color: transparent !important;
+  color: white !important;
+}
+
+.facebook-button {
+  margin-left: 155px;
+  background-color: #4267B2;
+  color: white;
+}
+
+.google-button {
+  margin-left: 155px;
+  margin-bottom:10px;
+}

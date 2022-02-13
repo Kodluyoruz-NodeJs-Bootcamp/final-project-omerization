@@ -1,0 +1,44 @@
+.feed-layout {
+    min-height:100vh;
+    background-color: #1d1d2b;
+}
+
+.feed-header {
+    margin: auto;
+    margin-top: 20px;
+    padding: 0 10%;
+    color: white; 
+    font-weight:200;
+    font-size: 2em;
+}
+
+.feed-header-user {
+    font-weight:400;
+}
+
+.feed-content {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #1d1d2b;
+    border: 1px solid #9ab;
+    border-radius: 5px;
+}
+
+.feed-divider {
+    color: white !important;
+    font-size: 1.8em !important;
+    font-weight: 700 !important;
+}
+
+
+.feed-footer {
+    background-color: #1d1d2b;
+}
+
+.post-button {  
+    background-color: #18c947;
+    border-color: #9ab;
+    font-weight: 700;
+    margin-left: 10%
+}
