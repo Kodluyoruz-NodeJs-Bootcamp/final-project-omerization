@@ -8,7 +8,7 @@
 
 <h3 align="center">
 <a href="https://www.moviesql.com">
-    <strong> Live on moviesql.com </strong>
+   :small_blue_diamond: <strong> Live on moviesql.com </strong>:small_blue_diamond:
 </a>
 </h3>
 
@@ -27,9 +27,8 @@ They can like or comment on these posts.
 
 - [Code overview](#code-overview)
 - [Features](#features)
-- [Deployment](#-deployment)
-   * [1- Debian](#-deployment)
-- [Development](#computer-development)
+- [Actions](#actions)
+- [Usage](#computer-development)
    * [1- MacOS](#computer-development)
    * [2- Debian](#computer-development)
 - [Author](#memo-authors)
@@ -50,7 +49,57 @@ They can like or comment on these posts.
 
 ### :diamond_shape_with_a_dot_inside: Fully responsive
 
-
-
+ You can use MovieSQL on any device.
+ <p align="leftt">
+<img src="https://i.ibb.co/tJqYv04/responsive.jpg" style="max-width:100%;">
+ </p>
 
 ### :link: Google and Facebook Auth
+
+Sign In with one click.
+
+ <p align="leftt">
+<img src="https://i.ibb.co/hWZr6ck/google.jpg" style="max-width:50%;">
+ </p>
+
+# Actions
+
+### :movie_camera: Add movies and actors to favorite list
+
+<p align="leftt">
+<img src="https://i.ibb.co/P5sscBB/favorites.jpg" style="max-width:50%;">
+ </p>
+ 
+ ### :scroll: Share your reviews about movies and actors on feed
+
+<p align="leftt">
+<img src="https://i.ibb.co/GVYJ3fq/feed.jpg" style="max-width:50%;">
+ </p>
+
+ 
+ <p align="leftt">
+<img src="https://i.ibb.co/41R17bN/post.jpg" style="max-width:50%;">
+ </p>
+ 
+ ### :thumbsup: Like and comment on posts
+ 
+  
+ <p align="leftt">
+<img src="https://i.ibb.co/nPSXxBD/comment.jpg" style="max-width:50%;">
+  <img src="https://i.ibb.co/pjNDRFz/likes.jpg" style="max-width:50%;">
+ </p>
+
+
+# Usage
+
+Download or clone the files. And go to path:
+
+`server/`
+
+Run the commands below
+
+`npm install `
+
+`npm start `
+
+Server will run on port 1337. You can open the app in your browser with `http://localhost:1337`   url 
