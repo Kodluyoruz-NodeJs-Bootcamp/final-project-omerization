@@ -22,7 +22,7 @@ They can like or comment on these posts.
 
 
   <p align="center">
-<img src="https://i.ibb.co/7XhVRCX/moviesql-landnig.jpg" style="max-width:100%;">
+<img src="https://i.ibb.co/3WY3vh4/moviesql-landnig.jpg" style="max-width:100%;">
  </p>
  
  <p align="center">
@@ -56,7 +56,7 @@ They can like or comment on these posts.
 
  You can use MovieSQL on any device.
  <p align="leftt">
-<img src="https://i.ibb.co/tJqYv04/responsive.jpg" style="max-width:100%;">
+<img src="https://i.ibb.co/VppQMFh/responsive.jpg" style="max-width:100%;">
  </p>
 
 ### :link: Google and Facebook Auth
@@ -64,7 +64,7 @@ They can like or comment on these posts.
 Sign In with one click.
 
  <p align="leftt">
-<img src="https://i.ibb.co/hWZr6ck/google.jpg" style="max-width:50%;">
+<img src="https://i.ibb.co/VCK40gT/google.jpg" style="max-width:50%;">
  </p>
 
 # Actions
@@ -72,26 +72,26 @@ Sign In with one click.
 ### :movie_camera: Add movies and actors to favorite list
 
 <p align="leftt">
-<img src="https://i.ibb.co/P5sscBB/favorites.jpg" style="max-width:50%;">
+<img src="https://i.ibb.co/2ccP4S2/favorites.jpg" style="max-width:50%;">
  </p>
  
  ### :scroll: Share your reviews about movies and actors on feed
 
 <p align="leftt">
-<img src="https://i.ibb.co/GVYJ3fq/feed.jpg" style="max-width:50%;">
+<img src="https://i.ibb.co/5WWjRbX/feed.jpg" style="max-width:50%;">
  </p>
 
  
  <p align="leftt">
-<img src="https://i.ibb.co/41R17bN/post.jpg" style="max-width:50%;">
+<img src="https://i.ibb.co/RzLPpzK/post.jpg" style="max-width:50%;">
  </p>
  
  ### :thumbsup: Like and comment on posts
  
   
  <p align="leftt">
-<img src="https://i.ibb.co/nPSXxBD/comment.jpg" style="max-width:50%;">
-  <img src="https://i.ibb.co/pjNDRFz/likes.jpg" style="max-width:50%;">
+<img src="https://i.ibb.co/fGHGsHy/comment.jpg" style="max-width:50%;">
+  <img src="https://i.ibb.co/jRTrm3y/likes.jpg" style="max-width:50%;">
  </p>
 
  ### :no_entry_sign: 404 Not Found
@@ -99,7 +99,7 @@ Sign In with one click.
  If you try to go to a page that does not exist, you may come across gandalf the gray.
  
  <p align="left">
-<img src="https://i.ibb.co/Y4gNKqC/404.jpg" >
+<img src="https://i.ibb.co/1MJykB8/404.jpg" >
  </p>
  
 
@@ -132,5 +132,5 @@ This program is a free and open source software.
 
  
   <p align="center">
-<img src="https://i.ibb.co/JsMPnps/moviesql-logo.png" style="height:100px">
+<img src="https://i.ibb.co/Njr0kBY/moviesql-logo.png" style="height:100px">
  </p>
