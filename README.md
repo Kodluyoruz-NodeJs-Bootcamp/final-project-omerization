@@ -1,5 +1,5 @@
   <p align="center">
-<img src="https://i.ibb.co/cXFW7yJ/moviesql-readme2.png" style="max-width:100%;">
+<img src="https://i.ibb.co/34YpSG3/moviesql-readme2.png" style="max-width:100%;">
  </p>
 
  
